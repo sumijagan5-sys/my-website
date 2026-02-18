@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VTS Real Estate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ================= CSS ================= -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fa;
+        }
+
+        header {
+            background: #0a3d62;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 40px;
+            background: white;
+            margin: 20px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #0a3d62;
+        }
+
+        /* ===== Your cursor code preserved ===== */
+        #point:hover {
+            cursor: crosshair;
+        }
+
+        #point1:hover {
+            cursor: zoom-in;
+        }
+
+        /* ===== Property Cards ===== */
+        .property-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .property-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .property-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .property-card div {
+            padding: 15px;
+        }
+
+        .price {
+            color: green;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        button {
+            background: #0a3d62;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: #0652dd;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+
+        footer {
+            background: #0a3d62;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+    <h1 id="point">VTS Real Estate</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#listings">Properties</a>
+        <a href="#contact">Contact</a>
+        <a href="#login">Login</a>
+    </nav>
+</header>
+
+<!-- ================= HOME ================= -->
+<section id="home">
+    <h2 id="point1">Find Your Dream Property</h2>
+    <p>Buy • Rent • Lease Residential, Commercial & Land Properties</p>
+
+    <!-- Search & Filter -->
+    <h3>Search Properties</h3>
+    <form>
+        <input type="text" placeholder="Location">
+        <select>
+            <option>Property Type</option>
+            <option>Buy</option>
+            <option>Rent</option>
+            <option>Lease</option>
+        </select>
+        <select>
+            <option>Bedrooms</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3+</option>
+        </select>
+        <button type="button">Search</button>
+    </form>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+    <h2>About Us</h2>
+    <p>
+        VTS Real Estate helps buyers, sellers, agents, and owners connect easily.
+        We focus on location-based verified properties with trusted agents.
+    </p>
+</section>
+
+<!-- ================= PROPERTY LISTINGS ================= -->
+<section id="listings">
+    <h2>Property Listings</h2>
+
+    <div class="property-grid">
+        <div class="property-card">
+            <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994" alt="House">
+            <div>
+                <h3>Luxury Villa</h3>
+                <p class="price">₹ 1.2 Cr</p>
+                <p>3 BHK • 2400 Sq Ft</p>
+                <p>Chennai</p>
+                <button>View Details</button>
+            </div>
+        </div>
+
+        <div class="property-card">
+            <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be" alt="Apartment">
+            <div>
+                <h3>Modern Apartment</h3>
+                <p class="price">₹ 45 Lakhs</p>
+                <p>2 BHK • 1200 Sq Ft</p>
+                <p>Bangalore</p>
+                <button>View Details</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= PROPERTY DETAILS ================= -->
+<section id="details">
+    <h2>Property Details</h2>
+    <p><b>Status:</b> Available</p>
+    <p><b>Amenities:</b> Parking, Lift, Power Backup, Security</p>
+
+    <!-- Google Map -->
+    <iframe
+        src="https://maps.google.com/maps?q=chennai&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        width="100%" height="250" style="border:0;">
+    </iframe>
+
+    <br><br>
+    <button>Contact Agent</button>
+</section>
+
+<!-- ================= USER LOGIN ================= -->
+<section id="login">
+    <h2>User / Agent Login</h2>
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button>Login</button>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Your Enquiry"></textarea>
+        <button type="submit">Send Enquiry</button>
+    </form>
+
+    <p>
+        📞 <a href="tel:+919999999999">Click to Call</a><br>
+        💬 <a href="https://wa.me/919999999999">WhatsApp</a>
+    </p>
+</section>
+
+<!-- ================= PRIVACY & TERMS ================= -->
+<section>
+    <h2>Privacy Policy</h2>
+    <p>Your data is safe with us. We never share user information.</p>
+
+    <h2>Terms & Conditions</h2>
+    <p>All property details are subject to verification.</p>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    © 2026 VTS Real Estate | All Rights Reserved
+</footer>
+
+</body>
+</html>
